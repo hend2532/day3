@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    max-width: 80%;
+    margin:30px auto;
+    border: 3px solid rgb(255, 208, 0);
+    padding: 17px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px rgb(243, 162, 122);
+    display: flex;
+    gap: 15px;
+    transition: 3s;
+}
+.parent:active{
+    transform:rotate(-2deg);
+    box-shadow: 5px 5px 10px 5px  rgb(242, 222, 131);
+}
+.child1{
+    /* float: left; */
+    max-width: 30%;
+    height: 85vh;
+    overflow-x: scroll;
+    border: 2px solid #eee;
+    display: flex;
+    border-radius: 10px;
+    background: rgb(235, 214, 121);
+    padding: 15px;
+}
+.child1 div{
+    padding:0px  15px;
+    /* display: inline-block; */
+    width: 100px;
+    border-right: 3px solid rgb(193, 175, 95);
+    /* height: fit-content; */
+    height: 90%;
+}
+.child1 .three{
+    background: rgb(167, 152, 83);
+    margin: 10px;
+    color:white;
+}
+.child1 div:hover{
+    animation: one 3s infinite;
+    cursor: pointer;
+}
+@keyframes one {
+    form{
+        background: rgb(255, 208, 0);
+    }
+    to{
+        background: rgb(129, 105, 2);
+        color:white;
+    }
+}
+
+.child2{
+    height: 85vh;
+    float: right;
+    margin: auto;
+    max-width: 69%;
+    overflow-y: auto;
+    padding: 10px;
+    border:2px solid #999 ;
+    outline: 2px solid #aaa;
+    background: rgb(231, 244, 211);
+    border-radius: 15px;
+}
+.child2 img{
+    width: 150px;
+    height: 150px !important;
+    border: 2px solid #eee;
+    margin: 15px;
+    cursor: pointer;
+    transition: 2s;
+    box-shadow: 2px 5px 5px rgb(167, 152, 83),1px 10px 15px 20px white;
+}
+.child2 img:hover{
+    box-shadow: 2px 5px 5px rgb(239, 196, 22),1px 10px 5px 0px white;
+    transform: scale(1.2);
+}
+@media (max-width:450px) {
+    .child2 img{
+        transform: rotate(20deg);
+    }
+    .child2 img:hover{
+        transform: rotate(0deg);
+        border: 2px dashed #666;
+    }
+   
+}
